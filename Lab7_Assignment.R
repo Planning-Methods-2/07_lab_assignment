@@ -21,6 +21,10 @@
 
 # 2.2 using the same data set (San Antonio sample), run an ANOVA test to see if there are significant differences between income categories and vehicle miles traveled by household. Follow the same steps used in the ANOVA exercise done in class. Produce three pdfs: one checking the normality assumption of the dependent variable, a second one checking the presence of outliers, and a third one showing the Tukey (post hoc) T-tests plot.
 
+# 2. [30 points] Run a T-test and an ANOVA test in your data.
+
 
 # Bonus: [30 points] Provide an HTML file with your answers using R-Markdown.
+
+
 
