@@ -21,7 +21,7 @@
 library(data.table)
 library(foreign)
 
-hts <- data.table(read.spss("06_lab/datasets/HTS.household.10regions.sav",to.data.frame = T))
+hts <- data.table(read.spss("datasets/HTS.household.10regions.sav",to.data.frame = T))
 
 # step 1 - Independence: there is no reason to think that the VMT values between these two regions are not independent
 hts[,.N,by=region]
@@ -86,7 +86,7 @@ abline(v = lower025,y=0,col='red')
  ## 6. Conduct post-hoc tests
 
 
-uza <- data.table(read.spss("06_lab/datasets/UZA.sav",to.data.frame = TRUE))
+uza <- data.table(read.spss("datasets/UZA.sav",to.data.frame = TRUE))
 
 
 # Step 1: Independence: There is no reason to think that TPM and region are dependent
@@ -111,10 +111,11 @@ uza[lntpm%in%outliers,]
 uza2<-uza[!lntpm%in%outliers,]
 
 boxplot(uza$lntpm~uza$region)
-  
+boxplot(uza2$lntpm~uza2$region)
+
 # Step 1: dependent variable is normal: 
 
-hist(uza$lntpm) # looks pretty normal to me!
+hist(uza2$lntpm) # looks pretty normal to me!
 
 # Step 1: variance homogeneity?
 bartlett.test(lntpm ~ region, data=uza2) # H0: variances are equal: p-value ==> accepts

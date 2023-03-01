@@ -1,4 +1,4 @@
-# Lab 7 Assignment: Chi-Square and Correlation
+# Lab 7 Assignment: Difference in Means and ANOVA
 # The University of Texas at San Antonio
 # URP-5393: Urban Planning Methods II
 
